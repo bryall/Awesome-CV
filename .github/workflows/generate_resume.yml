@@ -23,6 +23,8 @@ jobs:
       
     - name: LaTeX compilation
       uses: dante-ev/latex-action@v0.2.0
+      env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
       with:
         # The root LaTeX file to be compiled
         root_file: resume.tex
@@ -34,3 +36,4 @@ jobs:
         args: "" # optional, default is -pdf -latexoption=-file-line-error -latexoption=-interaction=nonstopmode
         # Install extra packages by apt-get
         #extra_system_packages: # optional
+        push: 'yes'
