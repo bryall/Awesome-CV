@@ -39,6 +39,6 @@ jobs:
     
     - name: commit resume
       run: |
-        git add resume.pdf
+        git add examples/resume.pdf
         git commit -m "updated resume"
     
